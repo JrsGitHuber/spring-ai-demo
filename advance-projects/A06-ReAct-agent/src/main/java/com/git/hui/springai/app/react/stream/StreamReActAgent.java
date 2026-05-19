@@ -67,6 +67,9 @@ public class StreamReActAgent {
 
                 // Act & Observe: 检查是否需要调用工具
                 if (hasToolCalls(assistantMessage)) {
+                    // 【重要】先把包含 tool_calls 的 assistant 消息添加到历史
+                    messages.add(assistantMessage);
+
                     // 执行工具调用
                     String toolResult = executeTools(assistantMessage);
 

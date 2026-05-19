@@ -1,5 +1,6 @@
 package com.git.hui.springai.app.react.simple;
 
+import com.alibaba.fastjson2.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
@@ -60,10 +61,15 @@ public class SimpleReActAgent {
             try {
                 // Thinking: 让大模型思考下一步该做什么
                 ChatResponse response = think(messages);
+                log.info("[response] {}", JSON.toJSONString(response));
+
                 AssistantMessage assistantMessage = response.getResult().getOutput();
 
                 // Act & Observe: 检查是否需要调用工具
                 if (hasToolCalls(assistantMessage)) {
+                    // 【重要】先把包含 tool_calls 的 assistant 消息添加到历史
+                    messages.add(assistantMessage);
+
                     // 执行工具调用
                     String toolResult = executeTools(assistantMessage);
 
@@ -131,6 +137,7 @@ public class SimpleReActAgent {
                 .build();
 
         Prompt prompt = new Prompt(allMessages, options);
+        log.info("[Prompt] {}", JSON.toJSONString(prompt));
 
         return chatClient.prompt(prompt)
                 .toolCallbacks(tools)

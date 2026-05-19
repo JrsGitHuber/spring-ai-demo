@@ -4,9 +4,9 @@ spring:
   ai:
     openai:
       # api-key 使用你自己申请的进行替换；如果为了安全考虑，可以通过启动参数进行设置
-      api-key: ${silicon-api-key}
+      api-key: "sk-a640824ca0bc47cb9865333ef53fddc3"
       transcription:
-        api-key: ${silicon-api-key}
+        api-key: "sk-a640824ca0bc47cb9865333ef53fddc3"
         base-url: https://api.siliconflow.cn/v1
         transcription-path: /audio/transcriptions
         options:
@@ -20,8 +20,10 @@ spring:
 #          model: THUDM/GLM-4-9B-0414
 #          model: THUDM/glm-4-9b-chat # 不支持工具调用
 #          model: Qwen/Qwen2.5-7B-Instruct
-          model: Qwen/Qwen3-8B
-      base-url: https://api.siliconflow.cn
+#          model: Qwen/Qwen3-8B
+          model: deepseek-chat
+#      base-url: https://api.siliconflow.cn
+      base-url: https://api.deepseek.com/
 
 # 修改日志级别
 logging:
