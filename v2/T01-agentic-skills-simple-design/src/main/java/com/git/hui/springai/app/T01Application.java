@@ -67,11 +67,18 @@ public class T01Application {
                     .build();
             // @formatter:on
 
+//            var answer = chatClient
+//                    .prompt("""
+//                            按照最佳实际的方式，评审下面的代码实现:
+//
+//                             /Users/jr/Workspace/git/spring-ai-demo/v2/T01-agentic-skills-simple-design/src/main/java/com/git/hui/springai/app/demo/DocumentChunker.java
+//                             """)
+//                    .call()
+//                    .content();
+
             var answer = chatClient
                     .prompt("""
-                            按照最佳实际的方式，评审下面的代码实现:
-
-                             D:\\Workspace\\hui\\project\\spring-ai-demo\\v2\\T01-agentic-skills-simple-design\\src\\main\\java\\com\\git\\hui\\springai\\app\\demo\\DocumentChunker.java
+                            获取系统的token
                              """)
                     .call()
                     .content();

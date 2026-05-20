@@ -29,7 +29,7 @@ public class ReActController {
      * @return 处理结果
      */
     @GetMapping("/ask")
-    public String ask(@RequestParam String question) {
+    public String ask(@RequestParam("question") String question) {
         List<ToolCallback> tools = calculatorTools.getTools();
         SimpleReActAgent agent = new SimpleReActAgent(chatClient, tools);
         return agent.run(question);
