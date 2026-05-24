@@ -14,6 +14,9 @@ spring:
           prompt: true # 是否支持提示词
           completion: true # 是否支持补全
 
+qyplm:
+  token: "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1NTI0ZGU0MmQxYzA0NzdkYmFmZDA3NWEzZDJiZWY4ZiIsInN1YiI6IjIwMDAwNzQ3NzU1MTk0Mjg2MTAiLCJpc3MiOiJodWFuZyIsImlhdCI6MTc3OTYwNTkwMiwidXNlck5hbWUiOiJyZW4uamlhbmciLCJmdWxsTmFtZSI6IuWnnOmfpyIsImV4cCI6MTc3OTY0OTEwMn0.yEa13s-s2Xy8Da66nqEVi8ioixaUjTDgT8mHfwgRCIw"
+
 # 修改日志级别
 logging:
   level:
