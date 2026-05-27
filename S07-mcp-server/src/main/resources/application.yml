@@ -15,7 +15,16 @@ spring:
           completion: true # 是否支持补全
 
 qyplm:
-  token: "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1NTI0ZGU0MmQxYzA0NzdkYmFmZDA3NWEzZDJiZWY4ZiIsInN1YiI6IjIwMDAwNzQ3NzU1MTk0Mjg2MTAiLCJpc3MiOiJodWFuZyIsImlhdCI6MTc3OTYwNTkwMiwidXNlck5hbWUiOiJyZW4uamlhbmciLCJmdWxsTmFtZSI6IuWnnOmfpyIsImV4cCI6MTc3OTY0OTEwMn0.yEa13s-s2Xy8Da66nqEVi8ioixaUjTDgT8mHfwgRCIw"
+  base-url: http://139.159.221.11:9002
+  pages:
+    - '{"我的PLM":"[点击打开](menu=我的PLM)"}'
+    - '{"高级搜索":"[点击打开](menu=高级搜索)"}'
+    - '{"AI计价-计价参数":"[点击打开](menu=计价参数)"}'
+    - '{"AI计价-计价产品":"[点击打开](menu=计价产品)"}'
+    - '{"AI计价-数据维护":"[点击打开](menu=数据维护)"}'
+    - '{"AI计价-成本分析":"[点击打开](menu=成本分析)"}'
+    - '{"需求管理-需求解读":"[点击打开](menu=需求解读)"}'
+    - '{"需求管理-需求库":"[点击打开](menu=需求库)"}'
 
 # 修改日志级别
 logging:
